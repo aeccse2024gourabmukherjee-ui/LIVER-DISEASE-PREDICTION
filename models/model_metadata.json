@@ -1,0 +1,109 @@
+{
+    "best_model_name": "Random Forest",
+    "features": [
+        "age",
+        "gender",
+        "total_bilirubin",
+        "direct_bilirubin",
+        "alkaline_phosphotase",
+        "alamine_aminotransferase",
+        "aspartate_aminotransferase",
+        "total_proteins",
+        "albumin",
+        "albumin_globulin_ratio"
+    ],
+    "metrics_summary": {
+        "Logistic Regression": {
+            "Accuracy": 0.6474,
+            "Precision": 0.914,
+            "Recall (Sensitivity)": 0.5579,
+            "F1-Score": 0.6929,
+            "ROC-AUC": 0.7645,
+            "Specificity": 0.8696,
+            "TP": 1541,
+            "FP": 145,
+            "TN": 967,
+            "FN": 1221,
+            "Confusion_Matrix": [
+                [
+                    967,
+                    145
+                ],
+                [
+                    1221,
+                    1541
+                ]
+            ]
+        },
+        "Decision Tree": {
+            "Accuracy": 0.8477,
+            "Precision": 0.9203,
+            "Recall (Sensitivity)": 0.861,
+            "F1-Score": 0.8896,
+            "ROC-AUC": 0.92,
+            "Specificity": 0.8147,
+            "TP": 2378,
+            "FP": 206,
+            "TN": 906,
+            "FN": 384,
+            "Confusion_Matrix": [
+                [
+                    906,
+                    206
+                ],
+                [
+                    384,
+                    2378
+                ]
+            ]
+        },
+        "Random Forest": {
+            "Accuracy": 0.9708,
+            "Precision": 0.9977,
+            "Recall (Sensitivity)": 0.9613,
+            "F1-Score": 0.9792,
+            "ROC-AUC": 0.9988,
+            "Specificity": 0.9946,
+            "TP": 2655,
+            "FP": 6,
+            "TN": 1106,
+            "FN": 107,
+            "Confusion_Matrix": [
+                [
+                    1106,
+                    6
+                ],
+                [
+                    107,
+                    2655
+                ]
+            ]
+        }
+    },
+    "best_model_metrics": {
+        "Accuracy": 0.9708,
+        "Precision": 0.9977,
+        "Recall (Sensitivity)": 0.9613,
+        "F1-Score": 0.9792,
+        "ROC-AUC": 0.9988,
+        "Specificity": 0.9946,
+        "TP": 2655,
+        "FP": 6,
+        "TN": 1106,
+        "FN": 107,
+        "Confusion_Matrix": [
+            [
+                1106,
+                6
+            ],
+            [
+                107,
+                2655
+            ]
+        ]
+    },
+    "class_mapping": {
+        "0": "Healthy / No Liver Disease Detected",
+        "1": "Liver Disease Detected"
+    }
+}

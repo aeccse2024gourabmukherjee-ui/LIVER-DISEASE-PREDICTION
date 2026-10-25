@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall (Sensitivity),F1-Score,ROC-AUC,Specificity,TP,FP,TN,FN,Confusion_Matrix
+Logistic Regression,0.6474,0.914,0.5579,0.6929,0.7645,0.8696,1541,145,967,1221,"[[967, 145], [1221, 1541]]"
+Decision Tree,0.8477,0.9203,0.861,0.8896,0.92,0.8147,2378,206,906,384,"[[906, 206], [384, 2378]]"
+Random Forest,0.9708,0.9977,0.9613,0.9792,0.9988,0.9946,2655,6,1106,107,"[[1106, 6], [107, 2655]]"
