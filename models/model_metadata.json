@@ -103,7 +103,7 @@
         ]
     },
     "class_mapping": {
-        "0": "Healthy / No Liver Disease Detected",
+        "0": "Healthy",
         "1": "Liver Disease Detected"
     }
 }

@@ -120,10 +120,10 @@ In clinical screening, **Recall (Sensitivity)** is paramount: missing a sick pat
 ```
 liver disease pred/
 ├── dataset/
-│   ├── liver_disease_data.csv            # Cleaned/copied project dataset
-│   └── Liver Patient Dataset (LPD)_train.csv
+│   ├── liver_disease_data.csv                   # Cleaned/copied project dataset
+│   └── Liver Patient Dataset (LPD)_train.csv   # Original dataset copy
 ├── models/
-│   ├── figures/                          # Generated high-resolution plots
+│   ├── figures/                                 # Generated high-resolution plots
 │   │   ├── best_model_cm.png
 │   │   ├── confusion_matrices.png
 │   │   ├── correlation_heatmap.png
@@ -131,27 +131,28 @@ liver disease pred/
 │   │   ├── models_comparison.png
 │   │   ├── roc_curves.png
 │   │   └── target_distribution.png
-│   ├── all_models_summary.csv            # Benchmark metrics table
-│   ├── best_liver_model.joblib           # Trained, serialized scikit-learn pipeline
-│   └── model_metadata.json               # Model metrics and class mappings
+│   ├── all_models_summary.csv                   # Benchmark metrics table
+│   ├── best_liver_model.joblib                  # Trained, serialized scikit-learn pipeline
+│   └── model_metadata.json                      # Model metrics and class mappings
 ├── notebooks/
-│   └── exploratory_analysis.ipynb        # Jupyter notebook walk-through
+│   └── Liver_Disease_Prediction_Complete.ipynb # Complete end-to-end Jupyter Notebook
 ├── src/
 │   ├── __init__.py
-│   ├── data_preprocessing.py             # Preprocessing & ColumnTransformer logic
-│   ├── dataset_inspector.py              # Phase 1 dataset discovery script
-│   ├── eda_visualizer.py                 # Phase 5 EDA chart generator
-│   ├── model_training.py                 # Model training, comparison, and saving
-│   └── predict.py                        # Reusable inference functions with validation
+│   ├── data_preprocessing.py                    # Preprocessing & ColumnTransformer logic
+│   ├── dataset_inspector.py                     # Phase 1 dataset discovery script
+│   ├── eda_visualizer.py                        # Phase 5 EDA chart generator
+│   ├── model_training.py                        # Model training, comparison, and saving
+│   └── predict.py                               # Reusable inference functions with validation
 ├── tests/
 │   ├── __init__.py
-│   ├── test_app.py                       # App file and artifact existence tests
-│   ├── test_model.py                     # Inference and input validation tests
-│   └── test_preprocessing.py             # Cleaning and transformation tests
-├── .gitignore                            # Version control exclusions
-├── app.py                                # Full 6-section Streamlit Web Application
-├── requirements.txt                      # Project dependency specification
-└── README.md                             # Comprehensive project documentation
+│   ├── test_app.py                              # App file and artifact existence tests
+│   ├── test_model.py                            # Inference and input validation tests
+│   └── test_preprocessing.py                    # Cleaning and transformation tests
+├── .gitignore                                   # Version control exclusions
+├── app.py                                       # Full 6-section Streamlit Web Application
+├── Liver_Disease_Prediction_Complete.ipynb      # Standalone Jupyter Notebook (all-in-one)
+├── requirements.txt                             # Project dependency specification
+└── README.md                                    # Comprehensive project documentation
 ```
 
 ---
@@ -204,15 +205,21 @@ Open `http://localhost:8501` in your web browser.
 
 ---
 
-## 🌐 7. Streamlit Web Application Sections
+## 🌐 7. Streamlit Web Application
 
-The web application features 6 responsive sections:
-1. **🏠 Home Dashboard:** Overview metrics, motivation, and clinical significance of LFT biomarkers.
-2. **📊 Dataset Overview:** Interactive table, descriptive statistics, schema, and preprocessing details.
-3. **🔬 Exploratory Data Analysis:** Target class balance charts, correlation heatmaps, and enzyme distributions.
-4. **🏆 Model Comparison:** Metrics benchmark table, multi-bar chart, confusion matrices, and ROC curves.
-5. **🧪 Prediction Tool:** Interactive patient form with quick-fill presets, validation checks, disease probability bar, biomarker flags, and clinical advisory.
-6. **📖 About Project:** Technical design details, SMOTE pipeline architecture, and methodology.
+The interface has been simplified into a **clean, single-page prediction portal**:
+1. **Model Performance Badges:** Displays active model (**Random Forest**), test accuracy (**97.1%**), clinical recall (**96.1%**), and ROC-AUC (**0.9988**).
+2. **Quick-Fill Preset Buttons:** One-click sample loading for demonstration:
+   - \📋 Load Healthy Sample\: Loads normal physiological lab values.
+   - \🚨 Load High Risk Sample\: Loads elevated liver enzyme/bilirubin profile.
+   - \🔄 Reset to Default\: Clears/resets inputs.
+3. **Structured Input Form:** 10 biomarker inputs organized into Demographics, Bilirubin Panel, Hepatic Enzymes, and Serum Proteins with clinical reference ranges.
+4. **Instant Assessment Display:**
+   - **Color-coded verdict box:** Green for healthy, Red for disease detected.
+   - **Disease Probability Gauge:** Interactive probability bar.
+   - **Biomarker Flags:** Highlights specific abnormal lab values.
+   - **Clinical Advisory Disclaimer.**
+5. **Sidebar Reference Guide:** Quick table showing standard reference intervals for medical tests.
 
 ---
 
@@ -221,6 +228,8 @@ The web application features 6 responsive sections:
 - **Non-Invasive Diagnostic Tool:** This model provides risk stratification based on laboratory values. It is not an alternative to liver biopsy or clinical diagnosis.
 - **External Cohort Validation:** The model should be validated on multi-center international health databases to assess generalizability across demographics.
 - **Serology & Imaging:** Integrating viral markers (Hepatitis B & C) and ultrasound elastography (FibroScan) will enhance diagnostic specificity.
-#   L I V E R - D I S E A S E - P R E D I C T I O N  
- #   L I V E R - D I S E A S E - P R E D I C T I O N  
+#   L I V E R - D I S E A S E - P R E D I C T I O N 
+ 
+ #   L I V E R - D I S E A S E - P R E D I C T I O N 
+ 
  
